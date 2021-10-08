@@ -1,0 +1,56 @@
+/**The purpose of this project is to create a Java class called BibleBook
+that maintains fields for book name, number of chapters, and a short
+summary of the book contents. 
+
+The class should also support displaying a book object in a resonable way.
+
+Test the class by creating 3 instances of it for 3 different books in
+the New Testaments of the Bible and then having each of those instances
+display itself. 
+
+For example, BibleBook book1= new BibleBook("Matthew", 28, "the gospel of
+Jesus Christ"); and then calling book1.display() should show something 
+like:
+Book Name: Matthew (28 chapters)- the Gospel of Jesus Christ
+
+Author: Holly Meyer
+Date: 10.5.21
+ **/
+
+public class Unit_Class {
+    public static void main (String[] args) {
+        BibleBook book1 = new BibleBook(); // creates object of class 
+        BibleBook book2 = new BibleBook(); //creates 2nd object of same class
+        BibleBook book3 = new BibleBook();
+        
+        book1.chapters = 24;
+        book1.bookName = "The Gospel according to Luke";
+        book1.shortSummary = "Luke recounts Jesus' ministry to Theophilus.";
+        
+        book2.chapters = 16;
+        book2.bookName = "Paul's Letter to the Romans";
+        book2.shortSummary = "Paul visits Rome to share his understanding of Christianity.";
+        
+        book3.chapters = 5;
+        book3.bookName = "Paul's Letter to the Ephesians";
+        book3.shortSummary = "Apostle Paul shares a message of unity through Jesus Christ.";
+
+        System.out.println("Book Name: " + book1.display());
+        System.out.println("Book Name: " + book2.display());
+        System.out.println("Book Name: " + book3.display());
+    }
+}
+class BibleBook{
+    int chapters;
+    String bookName;
+    String shortSummary;
+    
+    String display() {
+        String display;
+        
+        display = bookName + " (" + chapters + " chapters)- " + shortSummary;
+ 
+        return display;
+        
+    }
+}
